@@ -17,7 +17,7 @@ export function explode(dice, limit, multiple = false){
   };
   const {number, sides, results} = dice;
   const exploding = results.filter(d => d >= limit);
-  let exploded;;
+  let exploded;
   if (multiple) {
     exploded = explode(roll(exploding.length, sides), limit, multiple);
   } else {
